@@ -30,6 +30,11 @@ class UtilityServiceProvider extends ServiceProvider
         }
         return $resp;
     }
+	public static function first($query, $print = false)
+	{
+		$resp = self::query($query, $print);
+		return $resp && is_array($resp) && count($resp) >= 1 ? $resp[0] : $resp;
+	}
     public static function getOne($query){
 	    $finalQuery = $query. " LIMIT 1";
         $resp = DB::select(DB::raw($finalQuery));
