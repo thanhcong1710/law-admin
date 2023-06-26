@@ -68,5 +68,12 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::get('/roles/move/move-down',    'RolesController@moveDown')->name('roles.down');
         Route::get('/language/{language}', 'LangController@setLanguage');
     });
+
+    Route::group(['middleware' => 'web'], function ($router) {
+
+    });
+    Route::prefix('system')->group(function ($router) {
+        Route::post('lessions/list', 'LessionsController@list');
+    });
 });
 

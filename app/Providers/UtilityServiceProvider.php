@@ -114,4 +114,20 @@ class UtilityServiceProvider extends ServiceProvider
 			return $resp;
 		}
 	}
+
+	public static function makingPagination($list, $total, $page, $limit)
+	{
+		$pagination = (object)[];
+		$data = (object)[];
+		$pagination->spage = 1;
+		$pagination->cpage = $page;
+		$pagination->total = $total;
+		$pagination->limit = $limit;
+		$pagination->lpage = ($total % $limit) == 0 ? (int)($total / $limit) : (int)($total / $limit) + 1;
+		$pagination->ppage = $page > 0 ? $page - 1 : 0;
+		$pagination->npage = $page < $pagination->lpage ? $page + 1 : $pagination->lpage;
+		$data->list = $list;
+		$data->paging = $pagination;
+		return $data;
+	}
 }
