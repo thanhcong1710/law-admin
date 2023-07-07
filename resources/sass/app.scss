@@ -1,15 +1,10 @@
-// Fonts
-//@import url('https://fonts.googleapis.com/css?family=Nunito');
+/*=========================================================================================
+  File Name: app.scss
+  Description: Write your custom scss
+  ----------------------------------------------------------------------------------------
+  Item Name: Vuesax Admin - VueJS Dashboard Admin Template
+  Author: Pixinvent
+  Author URL: hhttp://www.themeforest.net/user/pixinvent
+==========================================================================================*/
 
-// Variables
-//@import 'variables';
-
-// Bootstrap
-//@import '~bootstrap/scss/bootstrap';
-
-// Fonts
-//@import "../../../coreui/node_modules/font-awesome/scss/font-awesome"; // Font Awesome
-//@import "../../../coreui/node_modules/simple-line-icons/scss/simple-line-icons"; // Simple Line Icons
-
-// CoreUI Style
-@import "../../resources/coreui/src/assets/scss/style";
+@import 'main';

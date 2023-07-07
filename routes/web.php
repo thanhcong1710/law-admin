@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,16 +13,4 @@
 |
 */
 
-Route::get('/{any}', function () {
-    return view('coreui.homepage');
-})->where('any', '.*');
-
-//Auth::routes();
-//Route::get('/home', 'HomeController@index')->name('home');
-
-/*
-Route::post('register', 'AuthController@register');
-Route::post('login', 'AuthController@login');
-Route::get('logout', 'AuthController@logout');
-Route::post('logout', 'AuthController@logout');
-*/
+Route::get('/{any}', 'ApplicationController')->where('any', '.*');
